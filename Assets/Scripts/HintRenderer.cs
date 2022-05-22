@@ -52,6 +52,8 @@ public class HintRenderer : MonoBehaviour
         }
 
         positions.Add(Vector3.zero);
+        componentLineRenderer.positionCount = positions.Count;
+        componentLineRenderer.SetPositions(positions.ToArray());
         Player.path = positions.ToArray();
     }
 }
